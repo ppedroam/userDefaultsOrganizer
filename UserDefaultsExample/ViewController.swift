@@ -28,6 +28,8 @@ class ViewController: UIViewController {
 
         if viewModel.shouldShowWelcomeAlert() {
             let alert = UIAlertController(title: "Welcome", message: "This is the an app to teach one new UserDefaults pattern", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(okButton)
             present(alert, animated: true, completion: {
                 viewModel.didPresentAlert()
             })
